@@ -1,11 +1,15 @@
 const theme = require('shiki/themes/material-palenight.json')
 const { remarkCodeHike } = require('@code-hike/mdx')
 
+const {
+  remarkCodeHike
+} = require('@code-hike/mdx')
+
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
   options: {
     remarkPlugins: [
-      [remarkCodeHike, {theme}]
+      [remarkCodeHike, {theme: 'nord'}]
     ]
   }
 })
